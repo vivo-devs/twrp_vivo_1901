@@ -5,4 +5,5 @@
 # mount point						fstype		device		flags										options
 
 # Physical Partitions
-/dev/block/platform/bootdevice/by-name/userdata		/data		ext4		noatime,nosuid,nodev,noauto_da_alloc,discard,errors=panic,inlinecrypt,errors=panic	latemount,wait,check,quota,reservedsize=128M,formattable,resize,forcefdeorfbe=/dev/block/platform/bootdevice/by-name/metadata
+/dev/block/platform/bootdevice/by-name/userdata		/data		ext4		noatime,nosuid,nodev,noauto_da_alloc,discard,errors=panic,inlinecrypt,errors=panic	wait,check,quota,formattable,resize,encryptable=/dev/block/platform/bootdevice/by-name/metadata
+/dev/block/platform/bootdevice/by-name/para         /misc       emmc        defaults                    defaults
