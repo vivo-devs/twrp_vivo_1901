@@ -33,7 +33,7 @@ subsystem sound
 /dev/urandom              0666   root       root
 # Make HW RNG readable by group system to let EntropyMixer read it.
 /dev/hw_random            0440   root       system
-/dev/ashmem               0666   root       root
+/dev/ashmem*              0666   root       root
 /dev/binder               0666   root       root
 /dev/hwbinder             0666   root       root
 /dev/vndbinder            0666   root       root
@@ -57,7 +57,7 @@ subsystem sound
 /dev/usb_accessory        0660   root       usb
 /dev/tun                  0660   system     vpn
 
-# XDmemory audio_ktv
+# qinbaoqiang add for audio_ktv
 /dev/vivo_audio_ktv_dev   0660   system     audio
 
 # CDMA radio interface MUX
@@ -70,21 +70,3 @@ subsystem sound
 /sys/devices/virtual/usb_composite/*   enable      0664  root   system
 /sys/devices/system/cpu/cpu*   cpufreq/scaling_max_freq   0664  system system
 /sys/devices/system/cpu/cpu*   cpufreq/scaling_min_freq   0664  system system
-
-# MTK BTIF driver
-/dev/btif                 0600   system     system
-
-# Trusty driver
-/dev/trusty-ipc-dev0      0660   system     system
-/dev/nebula-ipc-dev0      0660   system     system
-
-# RPMB (for Trusty)
-/dev/block/mmcblk0rpmb    0660   root       system
-
-# TrustonicTEE driver
-/dev/mobicore             0600   system     system
-/dev/mobicore-user        0666   system     system
-/dev/t-base-tui           0666   system     system
-
-#MTK In-House TEE
-/dev/ttyACM0              0660   radio      radio
